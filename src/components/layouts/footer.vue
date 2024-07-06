@@ -1,10 +1,10 @@
 <template>
-    <footer class="w-full bottom-0 absolute">
+    <footer class="w-full">
         <Container>
-            <div class="flex items-center justify-center flex-col gap-5">
+            <div class="flex lg:items-center justify-center flex-col gap-5">
                 <div class="flex items-center gap-1">
                     <Image
-                        src="/public/svg/logo.svg"
+                        src="/svg/logo.svg"
                         alt="SHOPR logo icon"
                     />
 
@@ -13,7 +13,7 @@
                     </Typography>
                 </div>
 
-                <div class="grid grid-cols-4 gap-5">
+                <div class="flex max-lg:flex-col lg:place-items-center gap-5">
                     <router-link :to="element.path" v-for="(element, i) in links" :key="i">
                         {{ element.label }}
                     </router-link>     
@@ -22,7 +22,7 @@
 
             <hr class="w-full border-[#CBCBCB] mt-4">
 
-            <div class="grid grid-cols-2 items-center py-4">
+            <div class="grid lg:grid-cols-2 items-center py-4">
                 <div class="flex items-center gap-5">
                     <Image
                         src="/svg/mastercard.svg"
@@ -50,7 +50,7 @@
                     />
                 </div>
 
-                <Typography tag="p" bold="normal" class="text-sm text-[#3E3E59] flex justify-end">© 2023 SHOPR</Typography>
+                <Typography tag="p" bold="normal" class="text-sm text-[#3E3E59] flex lg:justify-end lg:mt-0 mt-4">© 2023 SHOPR</Typography>
             </div>
         </Container>
     </footer>
@@ -60,7 +60,7 @@
 
     import Container from '@/components/ui/container.vue';
     import Image from '@/components/ui/image.vue';
-    import Typography from '../ui/typography.vue';
+    import Typography from '@/components/ui/typography.vue';
 
     const links = ref([
         { path: '/about', label: 'About Us' },

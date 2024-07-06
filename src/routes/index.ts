@@ -1,12 +1,14 @@
-// import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
-// const routes = [
-    
-// ];
+import Index from '@/view/pages/index.vue'
 
-// const router = createRouter({
-//     history: createWebHistory('/'),
-//     routes,
-// });
+const routes = [
+    { path: '/', name: 'Index', component: Index },
+];
 
-// export default router;
+const router = createRouter({
+    history: createWebHistory('/'),
+    routes,
+});
+
+export default router;
